@@ -1,7 +1,8 @@
-# Argon ONE Script
+# Argon ONE FAN Script
 
 ## Table of Contents
 
+- [About](#about)
 - [How to install Argon ONE Pi Power Button & Fan Control](#how-to-install-argon-one-pi-power-button--fan-control)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
@@ -22,20 +23,21 @@
 
 ---
 
-I have been using the [Argon ONE Cases for Raspberry Pi](https://www.argon40.com/collections/raspberry-pi-cases "Argon ONE Cases for Raspberry Pi") for a long time and I am very happy with them.
+## About
 
-To be able to use the cases to the full extent, it is recommended to install the [script](https://download.argon40.com/argon1.sh "https://download.argon40.com/argon1.sh") offered by [Argon 40](https://www.argon40.com "https://www.argon40.com").
+This repository serves as an unofficial archive of the [Argon 40](https://www.argon40.com) fan control and power button scripts for [Argon ONE Raspberry Pi cases](https://www.argon40.com/collections/raspberry-pi-cases). The purpose is to preserve a copy of these scripts in case they become unavailable from the official source.
 
-I have saved a copy here along with the instructions to have a copy in case [Argon 40](https://www.argon40.com "https://www.argon40.com") no longer offers it themselves.
+Additionally, this project includes a custom fan control script for **LineageOS (Android)**, tested on the LineageOS TV version for Raspberry Pi.
 
-I also created my own fan control script for LineageOS (Android), which was tested on the LineageOS TV version for Raspberry Pi.
+> **Disclaimer:** This project is not affiliated with, endorsed by, or associated with [Argon 40](https://www.argon40.com) in any way. It is maintained independently as an end-user resource.
 
-**Just to clarify: I am in no way affiliated with [Argon 40](https://www.argon40.com "https://www.argon40.com"), I only use their cases as an end user.**
+### Official Argon 40 Resources
 
-
-You can find them here:
-* Argon 40 Website: [https://www.argon40.com](https://www.argon40.com "https://www.argon40.com")
-* Argon 40 Github: [https://github.com/Argon40Tech](https://github.com/Argon40Tech "https://github.com/Argon40Tech")
+| Resource | Link |
+|----------|------|
+| Website | [argon40.com](https://www.argon40.com) |
+| GitHub | [github.com/Argon40Tech](https://github.com/Argon40Tech) |
+| Official Script | [download.argon40.com/argon1.sh](https://download.argon40.com/argon1.sh) |
 
 ## How to install Argon ONE Pi Power Button & Fan Control
 
