@@ -28,6 +28,8 @@ To be able to use the cases to the full extent, it is recommended to install the
 
 I have saved a copy here along with the instructions to have a copy in case [Argon 40](https://www.argon40.com "https://www.argon40.com") no longer offers it themselves.
 
+I also created my own fan control script for LineageOS (Android), which was tested on the LineageOS TV version for Raspberry Pi.
+
 **Just to clarify: I am in no way affiliated with [Argon 40](https://www.argon40.com "https://www.argon40.com"), I only use their cases as an end user.**
 
 
