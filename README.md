@@ -117,7 +117,7 @@ If you are running LineageOS (Android) on your Raspberry Pi with an Argon ONE ca
    ```
 3. Download and run the interactive installation script:
    ```
-   curl -O https://raw.githubusercontent.com/bikerlfh/Raspberry_Pi_Argon_Fan_Script/main/install-lineageos.sh
+   curl -O https://raw.githubusercontent.com/bikerlfh/Raspberry_Pi_Argon_Fan_Script/main/lineageos/install-lineageos.sh
    sh install-lineageos.sh
    ```
 
@@ -145,12 +145,13 @@ The check interval defaults to 120 seconds.
 
 ### Manual Installation
 
-If you prefer to install manually without the interactive script, you can copy `argon-lineageos.sh` to `/vendor/etc/init.d/03ssh`:
+If you prefer to install manually without the interactive script, you can copy [`lineageos/argon-lineageos.sh`](lineageos/argon-lineageos.sh) to `/vendor/etc/init.d/03ssh`:
 
 ```
 su
 mount -o remount,rw /vendor
 mkdir -p /vendor/etc/init.d
+curl -O https://raw.githubusercontent.com/bikerlfh/Raspberry_Pi_Argon_Fan_Script/main/lineageos/argon-lineageos.sh
 cp argon-lineageos.sh /vendor/etc/init.d/03ssh
 chmod 755 /vendor/etc/init.d/03ssh
 mount -o remount,ro /vendor
