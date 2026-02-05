@@ -114,7 +114,28 @@ If you are running LineageOS (Android) on your Raspberry Pi with an Argon ONE ca
 
 ### Installing on LineageOS
 
-1. Connect to your device via ADB or use a terminal emulator app
+1. Connect to your device using one of the following methods:
+
+   **Option A: Via SSH**
+
+   1. On your LineageOS device, go to **Settings > Raspberry Pi settings > SSH** and enable it
+   2. Note the IP address of your device (found in **Settings > Network & internet**)
+   3. From your computer, connect via SSH:
+      ```
+      ssh <user>@<device-ip>
+      ```
+
+   **Option B: Via ADB**
+
+   Connect a USB cable to your device and run:
+   ```
+   adb shell
+   ```
+
+   **Option C: Terminal emulator app**
+
+   Open a terminal emulator app directly on the device.
+
 2. Get root access:
    ```
    su
@@ -149,14 +170,14 @@ The check interval defaults to 120 seconds.
 
 ### Manual Installation
 
-If you prefer to install manually without the interactive script, you can copy [`lineageos/argon-lineageos.sh`](lineageos/argon-lineageos.sh) to `/vendor/etc/init.d/03ssh`:
+If you prefer to install manually without the interactive script, you can append [`lineageos/argon-lineageos.sh`](lineageos/argon-lineageos.sh) to `/vendor/etc/init.d/03ssh`:
 
 ```
 su
 mount -o remount,rw /vendor
 mkdir -p /vendor/etc/init.d
 curl -O https://raw.githubusercontent.com/bikerlfh/Argon40-ArgonOne-Fan-Script/main/lineageos/argon-lineageos.sh
-cp argon-lineageos.sh /vendor/etc/init.d/03ssh
+cat argon-lineageos.sh >> /vendor/etc/init.d/03ssh
 chmod 755 /vendor/etc/init.d/03ssh
 mount -o remount,ro /vendor
 reboot
@@ -169,15 +190,4 @@ After installation, the fan control starts automatically on boot. To start it ma
 ```
 su
 sh /vendor/etc/init.d/03ssh &
-```
-
-### Uninstalling on LineageOS
-
-To remove the fan control script:
-```
-su
-mount -o remount,rw /vendor
-rm /vendor/etc/init.d/03ssh
-mount -o remount,ro /vendor
-reboot
 ```
